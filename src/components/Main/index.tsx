@@ -10,7 +10,7 @@ import {
   getActiveItems,
   getCompletedItems,
   getProgressBarDangerData,
-  getProgressBarData
+  getProgressBarData,
 } from '../utils';
 import { RootState } from '../../store/rootReducer';
 import { TodosActionTypes } from '../../store/todos/actionTypes';
@@ -43,7 +43,7 @@ const mapStateToProps = (store: RootState): StateProps => {
     toBeDone: getActiveItems(todoStore.todos),
     barDataDone: getProgressBarData(todoStore.todos),
     barDataNotDone: getProgressBarDangerData(todoStore.todos),
-  }
+  };
 };
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({

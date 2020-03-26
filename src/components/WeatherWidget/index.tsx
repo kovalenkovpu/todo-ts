@@ -26,7 +26,7 @@ const mapStateToProps = (store: RootState): StateProps => {
   return {
     weather: weatherStore.weather,
     isLoading: weatherStore.isLoading,
-  }
+  };
 };
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({

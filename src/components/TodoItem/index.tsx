@@ -42,11 +42,15 @@ const TodoItem: React.FC<TodoItemProps> = ({
           color="success m-1"
           onClick={handleComplete}
           disabled={!active}
-        >Complete</ButtonToggle>
+        >
+          Complete
+        </ButtonToggle>
         <ButtonToggle
           color="danger m-1"
           onClick={handleDelete}
-        >Delete</ButtonToggle>
+        >
+          Delete
+        </ButtonToggle>
       </ListGroupItem>
     </ListGroup>
   );

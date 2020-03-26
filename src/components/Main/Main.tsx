@@ -25,59 +25,57 @@ const Main: React.FC<MainProps> = ({
   toBeDone,
   barDataDone,
   barDataNotDone,
-}) => {
-  return (
-    <Container className="themed-container main p-1" fluid>
-      <Row>
-        <Col md="2" className="bg-light">
-          <Card body className="shadow-sm m-3">
-            <CardTitle><h2>Statistics</h2></CardTitle>
-            <CardText>
-              <Badge href="#" color="success">{`Completed: ${completed}`}</Badge>
-              <br />
-              <Badge href="#" color="danger">{`To be done: ${toBeDone}`}</Badge>
-              <p className="mb-1 mt-3">Progress:</p>
-              <Progress multi>
-                <Progress
-                  bar
-                  color="success"
-                  value={barDataDone}
-                >
-                  {`${barDataDone}%`}
-                </Progress>
-                <Progress
-                  bar
-                  color="danger"
-                  value={barDataNotDone}
-                >
-                  {`${barDataNotDone}%`}
-                </Progress>
+}) => (
+  <Container className="themed-container main p-1" fluid>
+    <Row>
+      <Col md="2" className="bg-light">
+        <Card body className="shadow-sm m-3">
+          <CardTitle><h2>Statistics</h2></CardTitle>
+          <CardText>
+            <Badge href="#" color="success">{`Completed: ${completed}`}</Badge>
+            <br />
+            <Badge href="#" color="danger">{`To be done: ${toBeDone}`}</Badge>
+            <p className="mb-1 mt-3">Progress:</p>
+            <Progress multi>
+              <Progress
+                bar
+                color="success"
+                value={barDataDone}
+              >
+                {`${barDataDone}%`}
               </Progress>
-            </CardText>
-          </Card>
-          <WeatherWidget />
-        </Col>
-        <Col md="3">
-          <Card body className="shadow-sm m-3">
-            <CardTitle><h2>Add new to-do</h2></CardTitle>
-            <CardText>
-              <TodoForm
-                onTodoItemAdd={addTodo}
-              />
-            </CardText>
-          </Card>
-        </Col>
-        <Col md="7" className="bg-light">
-          <h2>To-dos</h2>
-          <ItemsList
-            todoList={todoList}
-            onTodoItemDelete={deleteTodo}
-            onTodoItemComplete={completeTodo}
-          />
-        </Col>
-      </Row>
-    </Container>
-  );
-};
+              <Progress
+                bar
+                color="danger"
+                value={barDataNotDone}
+              >
+                {`${barDataNotDone}%`}
+              </Progress>
+            </Progress>
+          </CardText>
+        </Card>
+        <WeatherWidget />
+      </Col>
+      <Col md="3">
+        <Card body className="shadow-sm m-3">
+          <CardTitle><h2>Add new to-do</h2></CardTitle>
+          <CardText>
+            <TodoForm
+              onTodoItemAdd={addTodo}
+            />
+          </CardText>
+        </Card>
+      </Col>
+      <Col md="7" className="bg-light">
+        <h2>To-dos</h2>
+        <ItemsList
+          todoList={todoList}
+          onTodoItemDelete={deleteTodo}
+          onTodoItemComplete={completeTodo}
+        />
+      </Col>
+    </Row>
+  </Container>
+);
 
 export default Main;

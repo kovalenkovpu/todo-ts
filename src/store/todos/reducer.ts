@@ -1,4 +1,4 @@
-import {TodoItemInterface} from '../../components/interfaces/TodoItem';
+import { TodoItemInterface } from '../../components/interfaces/TodoItem';
 import { ADD_TODO, COMPLETE_TODO, DELETE_TODO, TodosActionTypes } from './actionTypes';
 
 export interface TodoState {

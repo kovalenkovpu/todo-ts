@@ -13,7 +13,7 @@ export const getProgressBarData = (todoList: TodoItemInterface[]): number => {
     return 0;
   }
 
-  return Number((getCompletedItems(todoList) / todoList.length * 100).toFixed());
+  return Number((getCompletedItems(todoList) / (todoList.length * 100)).toFixed());
 };
 
 export const getProgressBarDangerData = (todoList: TodoItemInterface[]): number => {

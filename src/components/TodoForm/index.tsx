@@ -57,7 +57,8 @@ const TodoForm: React.FC<TodoForm> = ({ onTodoItemAdd }) => {
         />
       </FormGroup>
       <Button className="m-1 submit">Submit</Button>
-    </Form>);
+    </Form>
+  );
 };
 
 export default TodoForm;

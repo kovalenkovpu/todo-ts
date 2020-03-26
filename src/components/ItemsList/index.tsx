@@ -24,12 +24,14 @@ const ItemsList: React.FC<ItemsListProps> = ({
     <section>
       {
         todoList
-          .map((todoItem: TodoItemInterface): React.ReactNode => <TodoItem
-            key={todoItem.id}
-            todoItemData={todoItem}
-            onTodoItemDelete={onTodoItemDelete}
-            onTodoItemComplete={onTodoItemComplete}
-          />)
+          .map((todoItem: TodoItemInterface): React.ReactNode => (
+            <TodoItem
+              key={todoItem.id}
+              todoItemData={todoItem}
+              onTodoItemDelete={onTodoItemDelete}
+              onTodoItemComplete={onTodoItemComplete}
+            />
+          ))
       }
     </section>
   );
