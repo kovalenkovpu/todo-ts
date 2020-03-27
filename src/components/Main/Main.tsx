@@ -54,7 +54,9 @@ const Main: React.FC<MainProps> = ({
             </Progress>
           </CardText>
         </Card>
-        <WeatherWidget />
+        <WeatherWidget
+          city="London"
+        />
       </Col>
       <Col md="3">
         <Card body className="shadow-sm m-3">

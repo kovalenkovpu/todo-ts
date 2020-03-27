@@ -35,6 +35,6 @@ const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
 
 const connector = connect(mapStateToProps, mapDispatchToProps);
 
-export type WeatherWidgetProps = ConnectedProps<typeof connector>;
+export type ConnectedWeatherWidgetProps = ConnectedProps<typeof connector>;
 
 export default connector(WeatherWidget);
